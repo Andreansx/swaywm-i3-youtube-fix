@@ -68,6 +68,11 @@ Check **informations about application** and look for **Window Protocol**
 * If you see **`wayland`**  
   Then this is the cause of broken youtube player  
 
+My example:
+
+![screenshot](./IMG_3617.PNG)
+
+
 Regardless of what mode was shown there, the quickest probable fix is running Firefox via terminal emulator with a specific argument:
 ```zsh
 MOZ_ENABLE_WAYLAND=0 firefox
