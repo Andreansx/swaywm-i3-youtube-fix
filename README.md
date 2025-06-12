@@ -78,4 +78,19 @@ Regardless of what mode was shown there, the quickest probable fix is running Fi
 MOZ_ENABLE_WAYLAND=0 firefox
 ```
 
-Then fully restart firefox and if it works then it's done.
+Then fully restart firefox and if it works then it's done.  
+
+For me, nothing really seemed to work. Funny how on SwayWM session Youtube fully worked, but not on i3.  
+
+Run
+```zsh
+sudo pacman -Syu
+```
+```zsh
+sudo pacman -Rns pulseaudio
+```
+```zsh
+sudo pacman -S pipewire-pulse
+```
+
+This fully fixed the issue of YouTube video player not playing anything. 
