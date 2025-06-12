@@ -1,5 +1,7 @@
 # swaywm-i3-youtube-fix
 
+# Read Conclusion below since it's important
+
 # Specs
 *  **Hardware:** ThinkPad T450s
 *  **OS:** Arch Linux x86_64
@@ -94,3 +96,27 @@ sudo pacman -S pipewire-pulse
 ```
 
 This fully fixed the issue of YouTube video player not playing anything. 
+
+## Complete conclusion
+
+It may not be easy to find how to fix this, especially since this may be caused by a seemingly not related service ( such as audio server, as depicted here )  
+
+The issue with the YouTube player not working when having both **i3wm** and **SwayWM** installed, **does not** have to bed caused by codecs etc.  
+In my scenario, it was the audio server  
+
+At first I blamed the codecs and ffmpeg because Youtube **was** working on i3wm before, and stopped after installing **SwayWM**  
+
+You can run a script, available here, for a more complete way of fixing the same issue.
+
+1. Clone this repository and `cd` into it
+```zsh
+git clone https://github.com/andreansx/swaywm-i3-youtube-fix
+cd ./swaywm-i3-youtube-fix
+```
+2. Add execute permissions to the script and run it
+```zsh
+chmod +x ./fix.sh
+sudo ./fix.sh
+```
+
+#### The script should work on both **Bash** and **Zsh**. Was tested on Arch Linux with Zsh
